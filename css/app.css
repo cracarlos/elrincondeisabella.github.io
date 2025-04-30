@@ -1,0 +1,292 @@
+/* para aplicar box-sizing a todos los elementos */
+/* Para evitar poner box-sizing cada rato */
+/* Box-sizing es para evitar no tener resultados deseados con el padding, width etc */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 REM = 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Globales */
+h1, h2, h3 {
+    font-family: "Playfair", serif;
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor { 
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+}
+
+.btn {
+    background-color: #8cbc00;
+    display: block; /* toma todo el ancho disponible*/
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out; /* Animación*/
+}
+
+.btn:hover {
+    background-color: #769c02;
+
+}
+
+/* Utilidades */
+
+.text-center {
+    text-align: center;
+}
+
+/* Header y navegación */
+
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.nombre-sitio span {
+    color: #037bc0;
+}
+
+/* Logo */
+.contenedor-logo {
+    display: flex;
+   justify-content: center;
+   align-items: center
+}
+.logo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+}
+
+.contenedor-nav {
+    /* border-top: 1px solid #e1e1e1; */
+    border-top: 1px solid #ce7e31;
+
+}
+
+.nav-principal {
+   padding: 2rem 0;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.hero2 {
+    background-image: url('../img/pasarela2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+}
+
+.hero img{
+    /* background-image: url('../img/pasarela2.jpg'); */
+    /* background-repeat: no-repeat !important; */
+    background-size: cover ;
+    background-position: center center;
+    height: 55rem !important;
+    object-fit: cover;
+}
+
+/* Categorias */
+
+.categorias {
+    padding-top: 5rem;
+}
+
+.categorias h2 {
+    text-align: center;
+}
+
+.categorias a {
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categorias a:hover {
+    background-color: #ce7e31;
+    color: #fff;
+    border-bottom-right-radius: 1rem;
+}
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ; /* Mas optimizado*/
+    gap: 2rem;
+    /* tambien se puede usar asi */
+    /* grid-template-columns: 200px 200px 200px 200px ; */
+
+}
+
+.listado-categorias img {
+    height: 25.7rem;
+    width: 38.6rem;
+}
+
+/* Bloque Nosotros */
+
+.sobre-nosotros {
+    background-image: linear-gradient( to right, transparent 50%, #ce7e31 50%, #ce7e31 100% ),
+    url(../img/personas2.jpg);
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.sobre-nosotros-grid {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.texto-nosotros {
+    flex-basis: 40%;
+    color: #fff;
+}
+
+/*  Listado de Productos */
+
+.contenido-principal {
+    padding-top: 5rem;
+}
+
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem; /* Separación entre columnas */
+    row-gap: 2rem; /* Separación entre lineas */
+    /* gap: 2rem;  Esto equivale tanto columnas y filas */
+}
+.producto {
+    background-color: #ce7e31;
+    /* grid-auto-flow: column; */
+    grid-column: 1/4;
+}
+
+.producto img {
+    /* height: 43rem; */
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+}
+
+
+.texto-producto {
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p {
+    margin: 0 0 .5rem 0;
+}
+
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900; /* Grosor de la fuente*/
+}
+
+/* Footer */
+
+.site-footer {
+    border-top: 1px solid #e3e3e3e3;
+    margin-top: 5rem;
+    padding: 4rem;
+}
+
+.site-footer h3 {
+    margin-bottom: .5rem;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-menu a {
+    display: block;
+}
+
+.copyrigth {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.desarrollador { 
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/*  Nosotros */
+
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Ajusta las columnas a 1fr cada una para que se vea bien desde un movil */
+    grid-template-columns: repeat(auto-fit, minmax( 25rem, 1fr));
+    column-gap: 2rem;
+}
+
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto-grid {
+    display: flex;
+    justify-content: flex-start;
+}
+.contacto {
+    margin-top: 2rem;
+    /* padding: 10rem 0; */
+    background-color: #ce7e31;
+    /* background-image: linear-gradient( to right, transparent 50%, #ce7e31 50%, #ce7e31 100% ); */
+    /* background-repeat: no-repeat;
+    background-position: left center; */
+}
+
+.texto-contacto {
+    flex-basis: 40%;
+    color: #fff;
+    padding: 1rem;
+}
